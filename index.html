@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIT Raipur Result Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>National Institute of Technology Raipur</h1>
+    </header>
+
+    <section class="latest-results">
+        <h2>Latest Result Publish</h2>
+        <div class="result-box"></div>
+    </section>
+
+    <section class="result-section">
+        <div class="input-box">
+            <h2>Welcome to Online Result</h2>
+            <label for="roll">* Roll No :</label>
+            <input type="text" id="roll" placeholder="Enter Roll Number">
+            <button onclick="redirectToResult()">Show</button>
+        </div>
+        <div class="result-publish">
+            <h2>Result Publish</h2>
+            <label for="degree">Degree:</label>
+            <select id="degree">
+                <option>Please Select</option>
+                <option>MCA</option>
+            </select>
+            <label for="branch">Branch:</label>
+            <select id="branch">
+                <option>Please Select</option>
+            </select>
+        </div>
+    </section>
+
+    <footer>
+        <p>Designed and Developed By: <span class="highlight">MasterSoft</span>. © All rights reserved.</p>
+    </footer>
+
+    <script>
+        function redirectToResult() {
+            var roll = document.getElementById("roll").value;
+            if (roll === "") {
+                alert("Please enter a roll number.");
+                return;
+            }
+            window.location.href = "result.html?roll=" + roll;
+        }
+    </script>
+</body>
+</html>
